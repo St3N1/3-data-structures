@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/include -g -std=gnu++17 -o CMakeFiles\\ListLib.dir\\src\\01_lists_iterators\\iterator_functions.cpp.obj -c C:\\Users\\stenh\\Desktop\\3-data-structures\\labos\\01_lists_iterators\\src\\01_lists_iterators\\iterator_functions.cpp",
+  "file": "C:\\Users\\stenh\\Desktop\\3-data-structures\\labos\\01_lists_iterators\\src\\01_lists_iterators\\iterator_functions.cpp",
+  "output": "CMakeFiles\\ListLib.dir\\src\\01_lists_iterators\\iterator_functions.cpp.obj"
+},
+{
+  "directory": "C:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/include -g -std=gnu++17 -o CMakeFiles\\ListLib.dir\\src\\01_lists_iterators\\name_generation.cpp.obj -c C:\\Users\\stenh\\Desktop\\3-data-structures\\labos\\01_lists_iterators\\src\\01_lists_iterators\\name_generation.cpp",
+  "file": "C:\\Users\\stenh\\Desktop\\3-data-structures\\labos\\01_lists_iterators\\src\\01_lists_iterators\\name_generation.cpp",
+  "output": "CMakeFiles\\ListLib.dir\\src\\01_lists_iterators\\name_generation.cpp.obj"
+},
+{
+  "directory": "C:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/include -g -std=gnu++17 -o CMakeFiles\\TestSuite.dir\\test\\main.cpp.obj -c C:\\Users\\stenh\\Desktop\\3-data-structures\\labos\\01_lists_iterators\\test\\main.cpp",
+  "file": "C:\\Users\\stenh\\Desktop\\3-data-structures\\labos\\01_lists_iterators\\test\\main.cpp",
+  "output": "CMakeFiles\\TestSuite.dir\\test\\main.cpp.obj"
+},
+{
+  "directory": "C:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/include -g -std=gnu++17 -o CMakeFiles\\TestSuite.dir\\test\\name_generation.cpp.obj -c C:\\Users\\stenh\\Desktop\\3-data-structures\\labos\\01_lists_iterators\\test\\name_generation.cpp",
+  "file": "C:\\Users\\stenh\\Desktop\\3-data-structures\\labos\\01_lists_iterators\\test\\name_generation.cpp",
+  "output": "CMakeFiles\\TestSuite.dir\\test\\name_generation.cpp.obj"
+}
+]
