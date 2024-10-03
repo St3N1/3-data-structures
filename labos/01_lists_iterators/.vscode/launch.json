@@ -1,0 +1,34 @@
+// {
+//   "version": "0.2.0",
+//   "configurations": [
+//     {
+//       "name": "(lldb) Launch",
+//       "type": "lldb",
+//       "request": "launch",
+//       "program": "${workspaceFolder}/build/TestSuite.exe",
+//       "args": [],
+//       "stopOnEntry": false,
+//       "cwd": "${workspaceFolder}",
+//     }
+//   ]
+// }
+
+{
+  "name": "C++ Launch",
+  "type": "cppdbg",
+  "request": "launch",
+  "program": "${workspaceFolder}/build/TestSuite",
+  "stopAtEntry": false,
+  "customLaunchSetupCommands": [
+    {
+      "text": "target-run",
+      "description": "run target",
+      "ignoreFailures": false
+    }
+  ],
+  "launchCompleteCommand": "exec-run",
+  "windows": {
+    "MIMode": "gdb",
+    "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe"
+  }
+}
