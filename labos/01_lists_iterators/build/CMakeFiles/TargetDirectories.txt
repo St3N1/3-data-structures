@@ -1,4 +1,4 @@
-C:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/build/CMakeFiles/ListLib.dir
-C:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/build/CMakeFiles/TestSuite.dir
-C:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/build/CMakeFiles/edit_cache.dir
-C:/Users/stenh/Desktop/3-data-structures/labos/01_lists_iterators/build/CMakeFiles/rebuild_cache.dir
+/home/sten/3-data-structures/labos/01_lists_iterators/build/CMakeFiles/ListLib.dir
+/home/sten/3-data-structures/labos/01_lists_iterators/build/CMakeFiles/TestSuite.dir
+/home/sten/3-data-structures/labos/01_lists_iterators/build/CMakeFiles/edit_cache.dir
+/home/sten/3-data-structures/labos/01_lists_iterators/build/CMakeFiles/rebuild_cache.dir

@@ -12,24 +12,23 @@ std::string generate_random_name(std::uint64_t seed) {
     // TODO: Implement This!
     srand(seed);
 
-    char letters[] = "abcdefghijklmnopqrstuvwxyz";
+    std::string names[] = {"Emma", "Liam", "Olivia", "Noah", "Ava", "Elijah", "Sophia", "Lucas", "Isabella", "Mason",
+                           "Mia", "Ethan", "Amelia", "James", "Harper", "Benjamin", "Evelyn", "Alexander", "Abigail", "Henry",
+                           "Ella", "Sebastian", "Avery", "Jackson", "Scarlett", "Aiden", "Grace", "Matthew", "Chloe", "David"};
 
-    std::string name;
-    for (size_t i = 0; i < 10; i++) name += letters[rand() % 26];
-
-    return name;
+    return names[rand() % 30];
 }
 
 std::vector<std::string> fill_vector(std::size_t n_names, std::uint64_t seed) {
     // TODO: Implement This!
     std::vector<std::string> names;
-    for (size_t i = 0; i < n_names; i++) names.push_back(generate_random_name(seed));
+    for (size_t i = 0; i < n_names; i++) names.push_back(generate_random_name(seed + i));
     return names;
 }
 
 std::list<std::string> fill_list(std::size_t n_names, std::uint64_t seed) {
     // TODO: Implement This!
     std::list<std::string> names;
-    for (size_t i = 0; i < n_names; i++) names.push_back(generate_random_name(seed));
+    for (size_t i = 0; i < n_names; i++) names.push_back(generate_random_name(seed + i));
     return names;
 }

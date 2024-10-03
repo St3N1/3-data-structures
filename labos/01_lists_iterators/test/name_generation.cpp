@@ -13,14 +13,18 @@
 
 TEST_CASE("fill_vector, Same Seed Yields Same Names", "[vector]") {
     // TODO: Fill in this test case
-    const uint8_t n_names = 5;
-    const uint16_t seed = 100;
+    const uint8_t N_NAMES = 5;
+    const uint16_t SEED = 100;
+    const std::vector<std::string> NAMES_CHECK = {"Ella", "Grace", "Grace", "Henry", "Benjamin"};
 
-    std::vector<std::string> names = fill_vector(n_names, seed);
+    std::vector<std::string> names = fill_vector(N_NAMES, SEED);
 
     std::cout << "========= Begin vector =========" << std::endl;
     for (std::string name : names) std::cout << name << ", ";
     std::cout << "\n========= End vector =========" << std::endl;
+
+    CHECK(names == NAMES_CHECK);
+    CHECK(names.size() == N_NAMES);
 }
 
 // TODO: Define a test case that checks that uses fill_list() to generate some names,
@@ -28,12 +32,16 @@ TEST_CASE("fill_vector, Same Seed Yields Same Names", "[vector]") {
 
 TEST_CASE("fill_list, Same Seed Yields Same Names", "[list]") {
     // TODO: Fill in this test case
-    const uint8_t n_names = 5;
-    const uint16_t seed = 100;
+    const uint8_t N_NAMES = 5;
+    const uint16_t SEED = 200;
+    const std::list<std::string> NAMES_CHECK = {"James", "Mia", "Amelia", "Amelia", "Chloe"};
 
-    std::list<std::string> names = fill_list(n_names, seed);
+    std::list<std::string> names = fill_list(N_NAMES, SEED);
 
     std::cout << "========= Begin list =========" << std::endl;
     for (std::string name : names) std::cout << name << ", ";
     std::cout << "\n========= End list =========" << std::endl;
+
+    CHECK(names == NAMES_CHECK);
+    CHECK(names.size() == N_NAMES);
 }
