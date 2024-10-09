@@ -1,34 +1,26 @@
-// {
-//   "version": "0.2.0",
-//   "configurations": [
-//     {
-//       "name": "(lldb) Launch",
-//       "type": "lldb",
-//       "request": "launch",
-//       "program": "${workspaceFolder}/build/TestSuite.exe",
-//       "args": [],
-//       "stopOnEntry": false,
-//       "cwd": "${workspaceFolder}",
-//     }
-//   ]
-// }
-
 {
-  "name": "C++ Launch",
-  "type": "cppdbg",
-  "request": "launch",
-  "program": "${workspaceFolder}/build/TestSuite",
-  "stopAtEntry": false,
-  "customLaunchSetupCommands": [
+  "version": "0.2.0",
+  "configurations": [
     {
-      "text": "target-run",
-      "description": "run target",
-      "ignoreFailures": false
+      "name": "C/C++: g++ build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/build/TestSuite",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: g++ build active file"
     }
-  ],
-  "launchCompleteCommand": "exec-run",
-  "windows": {
-    "MIMode": "gdb",
-    "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe"
-  }
+  ]
 }

@@ -1,18 +1,9 @@
 # ninja log v5
-3	442	7496430533041463	CMakeFiles/ListLib.dir/src/01_lists_iterators/iterator_functions.cpp.obj	ca67a8bbc77be260
-9	479	7496430533442720	CMakeFiles/ListLib.dir/src/01_lists_iterators/name_generation.cpp.obj	5c8c9a8f3ff952de
-35	111	7496432778532759	libListLib.a	1b83c2b8a4c75ca7
-39	825	7496430536856049	CMakeFiles/TestSuite.dir/test/name_generation.cpp.obj	411efcda131036f8
-27	11820	7496430646471024	CMakeFiles/TestSuite.dir/test/main.cpp.obj	6e6b456b595e894d
-112	584	7496432783039863	TestSuite.exe	41198cb833fd3a24
-34	408	7496442610811031	CMakeFiles/ListLib.dir/src/01_lists_iterators/name_generation.cpp.obj	5c8c9a8f3ff952de
-24	438	7496442610821089	CMakeFiles/ListLib.dir/src/01_lists_iterators/iterator_functions.cpp.obj	ca67a8bbc77be260
-438	544	7496442612164148	libListLib.a	1b83c2b8a4c75ca7
-41	809	7496442614854021	CMakeFiles/TestSuite.dir/test/name_generation.cpp.obj	411efcda131036f8
-809	1519	7496442619449041	TestSuite.exe	41198cb833fd3a24
-3	578	7496448420756386	CMakeFiles/TestSuite.dir/test/name_generation.cpp.obj	411efcda131036f8
-579	971	7496448424197064	TestSuite.exe	41198cb833fd3a24
-7	718	7496449925208942	CMakeFiles/TestSuite.dir/test/name_generation.cpp.obj	411efcda131036f8
-719	1161	7496449929503630	TestSuite.exe	41198cb833fd3a24
-34	841	7496450853831659	CMakeFiles/TestSuite.dir/test/name_generation.cpp.obj	411efcda131036f8
-842	1254	7496450857745396	TestSuite.exe	41198cb833fd3a24
+0	320	1727954870323121583	CMakeFiles/ListLib.dir/src/01_lists_iterators/name_generation.cpp.o	eafb5a0250842e30
+0	295	1727944895590172636	CMakeFiles/ListLib.dir/src/01_lists_iterators/iterator_functions.cpp.o	c6ded34131017e43
+1	620	1727957260027289420	CMakeFiles/TestSuite.dir/test/name_generation.cpp.o	fbaa07f296abbb1b
+320	345	1727954870351837510	libListLib.a	6579760574c20cf5
+1	5429	1727944900717795618	CMakeFiles/TestSuite.dir/test/main.cpp.o	2e0d66e717dfca35
+620	943	1727957260374063048	TestSuite	fb55e87f8e3de1f5
+0	502	1728454711864406093	CMakeFiles/TestSuite.dir/test/name_generation.cpp.o	fbaa07f296abbb1b
+502	719	1728454712074406094	TestSuite	fb55e87f8e3de1f5
