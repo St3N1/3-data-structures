@@ -289,3 +289,95 @@ ADT = Abstract Data Type
   + index
 - indices f and l keep track of first and last positions
 
+## Searching Algorithms
+### Linear search
+
+### Binary search
+repeatedly deviding in half the portion of the list until 1 possible location in left
+- complexity is n/2^k = 1 or O(logn)
+
+first sort the array *before* doing binary search
+
+---
+---
+
+## Sorting Algorithms
+### Sorting
+- arranging elemens in a list or collection in increasing or decreasing order
+- should be homogenous (all elements should be of same type)
+- input to the sorting algorithms:
+	+ collection of records stored in an array
+
+### Analyzing sorting algorithms
+- running time: measure number of comparisons between keys
+- in some situations: measure numver of swap operations when records are "large"
+
+### Insertion sort - running time
+- worst case: O(n^2)
+	+ descending sorted array => n scans and n swaps
+	+ 2 for loops for sorted and unsorted sets
+- best case or almost sorted case: O(n)
+	+ ascending sorted array => n scans only
+- average case for a random array: O(n^2)
+
+### Bubble sort
+- scan the array form L to R multiple times
+	+ each scan is called a pass
+- algorithm:
+	+ 1 iteration of inner for loop moves through the record array from bottom to top, comparing adjacent keys
+	+ 2nd pass repeats this process, but not the top (-1)
+	+ -> elements 'bubble' to the top
+time complexity => O(n^2)
+	
+### Selection sort
+- 1st finds the smallest key in an unsorted list and places that value on top
+- repeat with the second smallest, and so on
+- just like bubble sort
+
+### Quick sort
+- "divide and conquer" strategy:
+	+ divide: divide input data S in 2 disjointed subsets S1 and S2
+	+ recur: solve subproblems assosiated with S1 and S2
+	+ conquer: combine solutions for S1 and S2 into a solution for S
+- fastest general-purpose in-memory sorting algorithm in average case & space efficient
+- most practical sorting algorithm because of its efficiency
+
+### Quick sort algorithm
+- pick an element, called a *pivot*, from the array
+	+ typically: middle element (or first, last)
+- *partitioning*: re-order the array, elements less than pivot come before pivot, elements greater than pivot come after pivot (called the *partition operation*)
+- recursively above steps to L & R subarray
+
+### Quick sort - running time
+- worst case: when 'pivot' breaks array in not equal halves (unbalanced array)
+	+ O(n^2)
+- best case: when 'pivot' breaks array into equal halves
+	+ logn levels for partitioning, each level n/2
+	+ O(nlogn)
+	
+### Merge sort
+- similar to quick sort, but does not do in place swaps (higher space complexity)
+- splits list into 2 similar sized lists (L & R), sort each list and then merge the sorted lists
+- time complexity: O(nlogn) - worst case
+
+### Merge sort - time complexity
+- recursion: O(logn)
+- merging: O(n)
+- worst-case: O(nlogn)
+
+- space complexity worst case, total arrays is n
+
+### Summary of sorting algorithms
+- selection sort: O(n^2)
+	+ in-place
+	+ slow (good for small inputs)
+- insertion sort: O(n^2)
+	+ in-place
+	+ slow (good for small inputs)
+- quick sort: O(n^2) expected
+	+ in-place, randomized
+	+ fastest (good for large inputs)
+- merge sort: O(nlogn)
+	+ sequential data access
+	+ fast (good for huge inputs)
+
