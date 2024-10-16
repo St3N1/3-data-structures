@@ -4,10 +4,9 @@
  */
 
 #pragma once
+#include <stack>
 
-using packet = // TODO: Fill in this type alias!
+using Packet = std::stack<int>;  // TODO: Fill in this type alias!
 
 // TODO: Fill in this return type
-	create_packet(
-	// TODO: Fill in these arguments
-);
+Packet create_packet(int physical_layer, int data_link_layer, int network_layer, int transport_layer, int application_layer);  // TODO: Fill in these arguments
