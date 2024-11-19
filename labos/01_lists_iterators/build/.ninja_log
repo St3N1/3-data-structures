@@ -1,9 +1,7 @@
 # ninja log v5
 0	320	1727954870323121583	CMakeFiles/ListLib.dir/src/01_lists_iterators/name_generation.cpp.o	eafb5a0250842e30
 0	295	1727944895590172636	CMakeFiles/ListLib.dir/src/01_lists_iterators/iterator_functions.cpp.o	c6ded34131017e43
-1	620	1727957260027289420	CMakeFiles/TestSuite.dir/test/name_generation.cpp.o	fbaa07f296abbb1b
+0	502	1728454711864406093	CMakeFiles/TestSuite.dir/test/name_generation.cpp.o	fbaa07f296abbb1b
 320	345	1727954870351837510	libListLib.a	6579760574c20cf5
 1	5429	1727944900717795618	CMakeFiles/TestSuite.dir/test/main.cpp.o	2e0d66e717dfca35
-620	943	1727957260374063048	TestSuite	fb55e87f8e3de1f5
-0	502	1728454711864406093	CMakeFiles/TestSuite.dir/test/name_generation.cpp.o	fbaa07f296abbb1b
 502	719	1728454712074406094	TestSuite	fb55e87f8e3de1f5
