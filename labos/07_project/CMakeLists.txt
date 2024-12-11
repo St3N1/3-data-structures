@@ -3,11 +3,14 @@ project(07_project)
 
 set(CMAKE_CXX_STANDARD 23)
 
-# add_library(ProjectLib STATIC 
-#     "src/07_project/turtle.cpp"
-# )
+add_library(ProjectLib STATIC 
+"src/07_project/l-system_interpreter.cpp"
+"src/07_project/production_hash.cpp"
+"src/07_project/production.cpp"
+"src/07_project/valid_production.cpp"
+)
 
-# target_include_directories(ProjectLib PRIVATE "include/")
+target_include_directories(ProjectLib PRIVATE "include/")
 
 add_executable(TestSuite
     "test/main.cpp"
@@ -16,7 +19,7 @@ add_executable(TestSuite
 
 target_include_directories(TestSuite PRIVATE "include/")
 
-# target_link_libraries(TestSuite PRIVATE ProjectLib)
+target_link_libraries(TestSuite PRIVATE ProjectLib)
 
 # add_executable(System
 #     "test/L-system.cpp"
