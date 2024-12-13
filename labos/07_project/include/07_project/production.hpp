@@ -15,16 +15,16 @@ template <typename SymbolType>
 class Production {
    public:
     Production();
-    Production(const SymbolType& predecessor, const std::vector<SymbolType>& successor);
+    Production(const SymbolType& predecessor, const SymbolType& successor);
 
     bool operator==(const Production& other) const;
 
     SymbolType getPredecessor() const;
-    std::vector<SymbolType> getSuccessor() const;
+    SymbolType getSuccessor() const;
 
    private:
     SymbolType m_predecessor;
-    std::vector<SymbolType> m_successor;
+    SymbolType m_successor;
 };
 
 #endif

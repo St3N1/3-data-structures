@@ -24,7 +24,7 @@ class LSystemInterpreter {
     void setTurtleAngle(float degrees);
     void runPythonTurtle();
 
-    std::vector<SymbolType> operator()(int n) const;
+    std::vector<SymbolType> operator()() const;
 
     std::vector<SymbolType> getAxiom() const;
     std::unordered_set<Production<SymbolType>> getProductions() const;

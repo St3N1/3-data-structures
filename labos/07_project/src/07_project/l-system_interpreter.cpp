@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// LSystemInterpreter
 template <typename SymbolType>
 LSystemInterpreter<SymbolType>::LSystemInterpreter(const vector<SymbolType>& axiom, const unordered_set<Production<SymbolType>>& productions, const unordered_set<SymbolType>& alphabet)
     : m_axiom(axiom), m_productions(productions), m_alphabet(alphabet), m_currentState(axiom) {
@@ -23,7 +24,7 @@ LSystemInterpreter<SymbolType>::LSystemInterpreter(const vector<SymbolType>& axi
 
     // Insert the leftovers in temporary alphabet in productions
     for (SymbolType symbol : alphabetCheck) {
-        Production<SymbolType> production(symbol, vector<SymbolType>(1, symbol));
+        Production<SymbolType> production(symbol, symbol);
         insertProduction(production);
     };
 
@@ -31,22 +32,26 @@ LSystemInterpreter<SymbolType>::LSystemInterpreter(const vector<SymbolType>& axi
     alphabetCheck.clear();
 };
 
+// Reset
 template <typename SymbolType>
 void LSystemInterpreter<SymbolType>::reset() { m_currentState = m_axiom; }
 
+// SetTurtleAngle
 template <typename SymbolType>
 void LSystemInterpreter<SymbolType>::setTurtleAngle(float degrees) { m_degrees = degrees; }
 
+// RunPythonTurtle
 template <typename SymbolType>
 void LSystemInterpreter<SymbolType>::runPythonTurtle() {
     if (!m_degrees) throw("Angle is not set, use 'setTurtleAngle'");
     system(("python3 ../python/main.py " + to_string(m_degrees)).c_str());
 }
 
+// Operator
 template <typename SymbolType>
-vector<SymbolType> LSystemInterpreter<SymbolType>::operator()(int n) const {
+vector<SymbolType> LSystemInterpreter<SymbolType>::operator()() const {
     // Generate new state
-    for (size_t i = 0; i < n; i++) const_cast<LSystemInterpreter*>(this)->m_currentState = generate(m_currentState);
+    const_cast<LSystemInterpreter*>(this)->m_currentState = generate(m_currentState);
 
     // Write new state to a file
     writeToFile(m_currentState);
@@ -54,18 +59,23 @@ vector<SymbolType> LSystemInterpreter<SymbolType>::operator()(int n) const {
     return m_currentState;
 };
 
+// GetAxiom
 template <typename SymbolType>
 vector<SymbolType> LSystemInterpreter<SymbolType>::getAxiom() const { return m_axiom; }
 
+// GetProductions
 template <typename SymbolType>
 unordered_set<Production<SymbolType>> LSystemInterpreter<SymbolType>::getProductions() const { return m_productions; }
 
+// GetAlphabet
 template <typename SymbolType>
 unordered_set<SymbolType> LSystemInterpreter<SymbolType>::getAlphabet() const { return m_alphabet; }
 
+// GetCurrentState
 template <typename SymbolType>
 vector<SymbolType> LSystemInterpreter<SymbolType>::getCurrentState() const { return m_currentState; }
 
+// Generate
 template <typename SymbolType>
 vector<SymbolType> LSystemInterpreter<SymbolType>::generate(const vector<SymbolType>& currentState) const {
     vector<SymbolType> newState;
@@ -73,15 +83,20 @@ vector<SymbolType> LSystemInterpreter<SymbolType>::generate(const vector<SymbolT
     return newState;
 }
 
+// ApplyProductions
 template <typename SymbolType>
 void LSystemInterpreter<SymbolType>::applyProductions(vector<SymbolType>& newState, const SymbolType& letter) const {
     for (const Production production : m_productions) {
         if (letter == production.getPredecessor()) {
-            for (const SymbolType successor : production.getSuccessor()) newState.push_back(successor);
+            for (char& successor : production.getSuccessor()) {
+                string s(1, successor);
+                newState.push_back(s);
+            }
         }
     }
 }
 
+// WriteToFile
 template <typename SymbolType>
 void LSystemInterpreter<SymbolType>::writeToFile(const vector<SymbolType>& state) const {
     ofstream MyFile("../python/L-system.txt");
@@ -89,10 +104,12 @@ void LSystemInterpreter<SymbolType>::writeToFile(const vector<SymbolType>& state
     MyFile.close();
 }
 
+// InsertProduction
 template <typename SymbolType>
 void LSystemInterpreter<SymbolType>::insertProduction(const Production<SymbolType>& production) { m_productions.insert(production); }
 
+// SetCurrentState
 template <typename SymbolType>
 void LSystemInterpreter<SymbolType>::setCurrentState(const vector<SymbolType>& state) { m_currentState = state; }
 
-template class LSystemInterpreter<const char*>;
+template class LSystemInterpreter<string>;

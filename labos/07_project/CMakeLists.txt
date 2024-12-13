@@ -18,13 +18,12 @@ add_executable(TestSuite
 )
 
 target_include_directories(TestSuite PRIVATE "include/")
-
 target_link_libraries(TestSuite PRIVATE ProjectLib)
 
-# add_executable(System
-#     "test/L-system.cpp"
-# )
+add_executable(L-system
+    "src/07_project/l-system.cpp"
+)
 
-# target_include_directories(System PRIVATE "include/")
-# target_link_libraries(System PRIVATE ProjectLib)
+target_include_directories(L-system PRIVATE "include/")
+target_link_libraries(L-system PRIVATE ProjectLib)
 
